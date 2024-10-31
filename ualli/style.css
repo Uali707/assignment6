@@ -1,0 +1,124 @@
+body {
+    background-color: beige;
+}
+
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.accordion-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-question:hover {
+    background-color: #e2e6ea;
+}
+
+
+.accordion-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+.accordion-item.active .accordion-answer {
+    padding: 15px;
+    max-height: 500px; 
+}
+
+
+.accordion-answer p {
+    margin: 0;
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
+.accordion-item.active .accordion-icon::after {
+    content: '−';
+    transition: content 0.3s ease;
+}
+
+.accordion-icon::before {
+    content: '+';
+    transition: content 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon::before {
+    content: '−';
+}
+body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+
+.gallery-img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+#greetingMessage {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;}
+#playSoundButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+}
+#animateButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* smooth scaling */
+}
+
+/* Scale button on hover */
+#animateButton:hover {
+    transform: scale(1.1); /* grow on hover */
+}
